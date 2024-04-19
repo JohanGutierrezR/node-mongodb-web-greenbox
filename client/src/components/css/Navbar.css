@@ -1,0 +1,149 @@
+/*Navbar*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+  
+}
+
+.back{
+  padding: 32px 0;
+  background-color: var(--verde);
+}
+
+.menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  background-color: var(--verde);
+  box-shadow: 0px 10px 20px -6px var(--verdeClaro);
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.menu.fixed {
+  top: 0; /* Mantiene el navbar fijo en la parte superior */
+  box-shadow: 0px 10px 20px -6px var(--verdeClaro); /* Se puede ajustar según sea necesario */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 55px;
+  margin-right: 12px;
+  margin-left: 20px;
+}
+
+.logo h2 {
+  font-size: 1.2rem;
+  color: var(--verdeClaro);
+  text-align: center;
+  margin-right: 10px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.logo h2 span {
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+
+
+.logo span:hover {
+  color: var(--claro);
+}
+
+.logo h2:hover {
+  color: var(--claro);
+}
+
+.menu .navbar ul li {
+  position: relative;
+  float: left;
+}
+
+.menu .navbar ul li a{
+  margin-right: 35px;
+  font-display: block;
+}
+
+.menu .navbar ul li a:hover{
+  color: var(--claro);
+}
+
+#menu {
+  display: none ;
+}
+
+.menu-icono{
+  width: 25px;
+}
+
+.menu label{
+  cursor: pointer;
+  display: none;
+}
+
+@media(max-width:991px){
+
+  .menu{
+    padding: 30px;
+    box-shadow: none
+  }
+  .menu label{
+    display: initial;
+    box-shadow: none
+  }
+
+  .back{ 
+    padding: 50px 0;
+  }
+
+  .menu .navbar{
+    position: absolute;
+    top: 90%;
+    left: 0%;
+    right: 0%;
+    background-color: var(--verde);
+    display: none;
+    text-align: center;
+  }
+
+  .logo{
+    margin-top: -0.5rem;
+  }
+
+  .menu .navbar ul li {
+    width: 100%;
+  }
+
+  #menu:checked ~ .navbar{
+    display: initial;
+  }
+  
+}
+
+@media (min-width: 768px){
+  .container {
+    max-width: 997px;
+}
+}
+
+
+
+  
